@@ -1,3 +1,5 @@
+<?php
+
 namespace Ocallit\Utils;
 
 class ArrayPath {
