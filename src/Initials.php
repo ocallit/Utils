@@ -78,7 +78,7 @@ final /*static*/ class Initials {
             /** @var InitialsMatchedRow $d */
             $words = preg_split("/\s+/",  $d[self::KEY_NORMALIZED], -1, PREG_SPLIT_NO_EMPTY);
             if($words === false)
-                throw new Exception("Error splitting words");
+                throw new Exception("preg_split: Error splitting words: " . preg_last_error_msg());
             foreach($initials as $initial) {
                 foreach($words as $i => &$word) {
                     if($word !== "" && str_starts_with($word, $initial)) {
